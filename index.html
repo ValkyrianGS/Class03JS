@@ -19,7 +19,7 @@
 <h1>Hello Traveler</h1>
 <h2>Let's play a game</h2>
 <h3>Think one Number betwhen <span id="minNumber"></span> e <span id="maxNumber"></span> </h3>
-<h3>I guess the number is: <span id="number"></span></h3>
+<h3>I guess the number<span id="number"></span></h3>
 <hr>
 <h3>The number is:</h3>
 <button onclick="maior()">it's bigger!</button>
@@ -41,23 +41,24 @@
 var maior = function(){
 // numero é maior
 minNumber = tentativa;
-document.getElementById("genio").innerHTML = "o numero é ?" + tentativa;
-
-
+gerartentativa();
+document.getElementById("genio").innerHTML ="o numero é maior " + tentativa;
 }
 var menor = function(){
 // numero é menor
-maxNumber = tentativa;
-document.getElementById("genio").innerHTML = "o numero é ?" + tentativa;
 
+maxNumber = tentativa;
+gerartentativa();
+document.getElementById("genio").innerHTML ="o numero é menor " +tentativa;
 }
  var acertou = function(){
 // acertou
 document.getElementById("genio").innerHTML ="I'm a Genious!";
  }
-    
 
-
-        </script>
+ function gerartentativa(){
+ tentativa = Math.round((minNumber+ maxNumber)/2);
+}
+</script>
 </body>
 </html>
